@@ -41,7 +41,7 @@ let getImageAppNameList = async function getImageAppNameList(heroku_apps) {
 let buildDockerCompose = async function buildDockerCompose(dockerComposeFilePath) {
     try {
         console.log('docker image build started.');
-        await exec(`docker-compose -f ${dockerComposeFilePath} build`);
+        await exec(`docker compose -f ${dockerComposeFilePath} build`);
         console.log('docker image build finished.');
     }
     catch (error) {
